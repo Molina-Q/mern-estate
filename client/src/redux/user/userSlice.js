@@ -1,13 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = {
+const initialState = { // initial value
   currentUser: null,
   error: null,
   loading: false,
 };
 
 const userSlice = createSlice({
-  name: "user",
+  name: "user", // used this to call the slice in the components
   initialState,
   reducers: {
     signInStart: (state) => {
