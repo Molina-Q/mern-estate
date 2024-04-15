@@ -262,6 +262,7 @@ export default function CreateListing() {
                         required
                         onChange={handleChange}
                         checked={formData.bedrooms}
+                        value={formData.bedrooms}
                      />
                      <label htmlFor="bedrooms">Beds</label>
                   </div>
@@ -275,6 +276,7 @@ export default function CreateListing() {
                         required
                         onChange={handleChange}
                         checked={formData.bathrooms}
+                        value={formData.bathrooms}
                      />
                      <label htmlFor="bathrooms">Baths</label>
                   </div>
@@ -288,6 +290,7 @@ export default function CreateListing() {
                         required
                         onChange={handleChange}
                         checked={formData.regularPrice}
+                        value={formData.regularPrice}
                      />
                      <div className="flex flex-col items-center">
                         <label htmlFor="regularPrice">Regular price</label>
@@ -305,6 +308,7 @@ export default function CreateListing() {
                            required
                            onChange={handleChange}
                            checked={formData.discountPrice}
+                           value={formData.discountPrice}
                         />
                         <div className="flex flex-col items-center">
                            <label htmlFor="discountPrice">
