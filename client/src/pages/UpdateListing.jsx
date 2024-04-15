@@ -39,7 +39,7 @@ export default function UpdateListing() {
 			const listingId = params.listingId;
 			const res = await fetch(`/api/listing/get/${listingId}`);
 			const data = await res.json();
-			if(data.success === false) {
+			if (data.success === false) {
 				console.log(data.message);
 				return;
 			}
@@ -306,7 +306,9 @@ export default function UpdateListing() {
 							/>
 							<div className="flex flex-col items-center">
 								<label htmlFor="regularPrice">Regular price</label>
-								<span className="text-xs">($ / month)</span>
+								{formData.type === "rent" && (
+									<span className="text-xs">($ / month)</span>
+								)}
 							</div>
 						</div>
 						{formData.offer && (
@@ -324,7 +326,9 @@ export default function UpdateListing() {
 								/>
 								<div className="flex flex-col items-center">
 									<label htmlFor="discountPrice">Discounted price</label>
-									<span className="text-xs">($ / month)</span>
+									{formData.type === "rent" && (
+										<span className="text-xs">($ / month)</span>
+									)}
 								</div>
 							</div>
 						)}
